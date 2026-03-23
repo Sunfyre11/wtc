@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Women's Travel Club Kolkata</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('trip.jpg') center/cover no-repeat;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom,
+          rgba(30, 18, 6, 0.55) 0%,
+          rgba(30, 18, 6, 0.35) 50%,
+          rgba(30, 18, 6, 0.65) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      padding: 2rem;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.4rem 1.2rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(4px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 300;
+      color: white;
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: #e8b96a;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-hero-primary {
+      background: var(--gold);
+      color: white;
+      padding: 1rem 2.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .btn-hero-primary:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-outline {
+      border: 1.5px solid rgba(255, 255, 255, 0.6);
+      color: white;
+      padding: 1rem 2.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: 0.3s;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-hero-outline:hover {
+      border-color: white;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    .hero-scroll::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0)
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(6px)
+      }
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--brown);
+      padding: 2.5rem 2rem;
+    }
+
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 300;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+      margin-top: 0.35rem;
+    }
+
+    /* INTRO */
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .intro-img {
+      position: relative;
+    }
+
+    .intro-img img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .intro-img-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--gold);
+      color: white;
+      padding: 1.25rem 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(200, 150, 74, 0.4);
+    }
+
+    .intro-img-badge .big {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .intro-img-badge .small {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .intro-text .eyebrow {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .intro-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 300;
+      color: var(--brown);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-text p {
+      color: var(--text-mid);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .intro-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.75rem 0;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .feature-icon {
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 8px;
+      background: rgba(200, 150, 74, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+    .feature-text strong {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .feature-text span {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    /* UPCOMING TOURS PREVIEW */
+    .upcoming-bg {
+      background: var(--warm-white);
+      padding: 80px 0;
+    }
+
+    .tours-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .tour-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: 0.3s;
+      box-shadow: 0 2px 16px var(--shadow);
+    }
+
+    .tour-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px var(--shadow);
+    }
+
+    .tour-date {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tour-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .tour-type {
+      font-size: 0.75rem;
+      color: var(--text-light);
+    }
+
+    /* REVIEWS */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .review-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      position: relative;
+      box-shadow: 0 2px 16px var(--shadow);
+    }
+
+    .review-card::before {
+      content: '"';
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      color: rgba(200, 150, 74, 0.15);
+      position: absolute;
+      top: 0.5rem;
+      left: 1.5rem;
+      line-height: 1;
+    }
+
+    .review-text {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+      font-style: italic;
+    }
+
+    .review-author {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--brown);
+      letter-spacing: 0.02em;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* CTA STRIP */
+    .cta-strip {
+      background: linear-gradient(135deg, var(--gold-dark), var(--brown));
+      padding: 80px 2rem;
+      text-align: center;
+    }
+
+    .cta-strip h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      color: white;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-strip p {
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-white {
+      background: white;
+      color: var(--brown);
+      padding: 1rem 2.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .btn-cta-white:hover {
+      background: var(--cream);
+      transform: translateY(-2px);
+    }
+
+    .btn-cta-outline {
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      color: white;
+      padding: 1rem 2.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    .btn-cta-outline:hover {
+      border-color: white;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* FADE IN */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 900px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .intro-img-badge {
+        right: 0;
+      }
+
+      .tours-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .tours-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intro-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img src="logo.png" alt="Women's Travel Club Kolkata" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="previous_tours.html">Previous</a></li>
+        <li><a href="upcoming_tours.html">Upcoming</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="payments.html" class="nav-cta">PAYMENTS</a></li>
+      </ul>
+      <div class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">Est. 2019 · Kolkata</span>
+      <h1>Travel. Explore.<br><em>Belong.</em></h1>
+      <p>A community of women who chase adventure, discover offbeat destinations, and build lifelong friendships along
+        the way.</p>
+      <div class="hero-actions">
+        <a href="upcoming_tours.html" class="btn-hero-primary">View Upcoming Tours</a>
+        <a href="about.html" class="btn-hero-outline">Our Story</a>
+      </div>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div>
+        <div class="stat-num">7+</div>
+        <div class="stat-label">Years of Travel</div>
+      </div>
+      <div>
+        <div class="stat-num">100+</div>
+        <div class="stat-label">Trips Completed</div>
+      </div>
+      <div>
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Happy Travellers</div>
+      </div>
+      <div>
+        <div class="stat-num">15+</div>
+        <div class="stat-label">States Explored</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="section fade-in">
+    <div class="intro-grid">
+      <div class="intro-img">
+        <img src="dp.jpg" alt="Women's Travel Club" />
+        <div class="intro-img-badge">
+          <div class="big">2019</div>
+          <div class="small">Founded</div>
+        </div>
+      </div>
+      <div class="intro-text">
+        <p class="eyebrow">About Women's Travel Club</p>
+        <h2>Where Solo Travellers<br>Find Their Tribe</h2>
+        <p>It all started on 20th January, 2019, when a group of Facebook friends with a shared passion for travel set
+          out together. What began as one trip grew into a thriving community of women explorers, managed by
+          <strong>Jhumur Nandy</strong>.
+        </p>
+        <p>We specialize in offbeat, uncommon destinations — places that most travel groups don't go. Every trip is
+          planned with safety, comfort, and unforgettable experiences at its core.</p>
+        <div class="intro-features">
+          <div class="feature-item">
+            <div class="feature-icon">🏔️</div>
+            <div class="feature-text">
+              <strong>Offbeat Destinations</strong>
+              <span>Beyond the usual tourist trail</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🛡️</div>
+            <div class="feature-text">
+              <strong>Safety First</strong>
+              <span>Carefully planned for women</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">💫</div>
+            <div class="feature-text">
+              <strong>All Age Groups</strong>
+              <span>Inclusive and welcoming</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🤝</div>
+            <div class="feature-text">
+              <strong>Community</strong>
+              <span>Lifelong friendships formed</span>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="btn btn-primary">Read Our Full Story</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- UPCOMING TOURS PREVIEW -->
+  <div class="upcoming-bg">
+    <div class="section" style="padding-top:0;padding-bottom:0;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;">
+        <div>
+          <h2 class="section-title">Upcoming Tours</h2>
+          <span class="rule"></span>
+        </div>
+        <a href="upcoming_tours.html" class="btn btn-outline" style="margin-bottom:2rem;">View All</a>
+      </div>
+      <div class="tours-grid">
+        <div class="tour-card fade-in">
+          <div class="tour-date">📅 10 Apr – 16 Apr 2026</div>
+          <div class="tour-name">Ranthambore &amp; Jhalana</div>
+          <span class="badge">Family &amp; Women</span>
+        </div>
+        <div class="tour-card fade-in">
+          <div class="tour-date">📅 24 May – 29 May 2026</div>
+          <div class="tour-name">Jim Corbett National Park</div>
+          <span class="badge">Family &amp; Women</span>
+        </div>
+        <div class="tour-card fade-in">
+          <div class="tour-date">📅 1 Jun – 11 Jun 2026</div>
+          <div class="tour-name">Grand Ladakh</div>
+          <span class="badge green">Women Only</span>
+        </div>
+        <div class="tour-card fade-in">
+          <div class="tour-date">📅 24 Jun – 2 Jul 2026</div>
+          <div class="tour-name">Zanskar Valley</div>
+          <span class="badge green">Women Only</span>
+        </div>
+        <div class="tour-card fade-in">
+          <div class="tour-date">📅 15 Dec – 19 Dec 2026</div>
+          <div class="tour-name">Lakshadweep</div>
+          <span class="badge green">Women Only</span>
+        </div>
+        <div class="tour-card fade-in">
+          <div class="tour-date">📅 18 Dec – 22 Dec 2026</div>
+          <div class="tour-name">Lakshadweep</div>
+          <span class="badge green">Women Only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="section fade-in">
+    <h2 class="section-title">Traveller Stories</h2>
+    <span class="rule"></span>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">As a serious asthma patient, I never imagined completing a Ladakh trip without any oxygen
+          support. Full credit goes to Jhumur Nandy. Her detailed guidance and care made this trip possible in the most
+          beautiful way.</p>
+        <div class="review-author">— Sharabani Pal</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Jhumur took us to Umling La Pass — higher than Everest Base Camp — where most operators
+          won't go. The hotels, food, everything was wonderful. I want every woman to experience a trip with WTC at
+          least once.</p>
+        <div class="review-author">— Dr. Koyela Ghosh</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">I had become completely homebound due to family circumstances. Women's Travel Club gave
+          me a new chance to enjoy nature. Jhumur's patience, her uncommon destination choices, and the community spirit
+          is unmatched.</p>
+        <div class="review-author">— Jharna Ganguly</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">To those still wondering "should I go?" — just take that one brave step outside your
+          door. Women's Travel Club will hold your hand. It is truly an open sky — with clouds, sunshine, a little
+          storm, and so many wonderful people.</p>
+        <div class="review-author">— Sangita Chatterjee</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA STRIP -->
+  <div class="cta-strip">
+    <h2>Ready for Your Next Adventure?</h2>
+    <p>Join hundreds of women who have discovered the joy of exploring with WTC Kolkata.</p>
+    <div class="cta-actions">
+      <a href="upcoming_tours.html" class="btn-cta-white">See Upcoming Trips</a>
+      <a href="https://www.facebook.com/share/g/1AzvtFg9pc" target="_blank" class="btn-cta-outline">Connect on
+        Facebook</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="logo.png" alt="WTC Kolkata" />
+          <p>A community of women travellers from Kolkata, exploring offbeat destinations since 2019. Founded &amp;
+            managed by Jhumur Nandy.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="previous_tours.html">Previous Tours</a></li>
+            <li><a href="upcoming_tours.html">Upcoming Tours</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:9163407717">📞 9163407717</a></li>
+            <li><a href="mailto:wtckolkata03@gmail.com">✉️ wtckolkata03@gmail.com</a></li>
+            <li><a href="https://wa.me/919163407717" target="_blank">💬 WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Women's Travel Club Kolkata. All rights reserved.</span>
+        <div class="footer-social">
+          <a class="social-link" href="https://www.facebook.com/share/g/15WhLAve8J" target="_blank"
+            title="Facebook">f</a>
+          <a class="social-link" href="https://www.instagram.com" target="_blank" title="Instagram">ig</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

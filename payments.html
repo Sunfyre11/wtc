@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payments – Women's Travel Club Kolkata</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .payment-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 760px;
+      margin: 2.5rem auto 0;
+    }
+    .payment-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 24px var(--shadow);
+      transition: 0.3s;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+    .payment-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+    .payment-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px var(--shadow); }
+    .payment-icon { font-size: 3rem; margin-bottom: 1.25rem; display: block; }
+    .payment-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 0.75rem;
+    }
+    .payment-card p { font-size: 0.875rem; color: var(--text-light); line-height: 1.7; margin-bottom: 1.75rem; }
+    .payment-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: 0.2s;
+    }
+    .payment-card:hover .payment-cta { background: var(--gold-dark); }
+    .whatsapp-strip {
+      max-width: 680px;
+      margin: 1.75rem auto 0;
+      background: #25D366;
+      border-radius: 12px;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .whatsapp-strip:hover { background: #1ebe5c; transform: translateY(-2px); }
+    .whatsapp-strip span { font-size: 0.88rem; font-weight: 500; color: white; }
+    .payment-note {
+      max-width: 680px;
+      margin: 1.5rem auto 0;
+      background: rgba(200,150,74,0.07);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      text-align: center;
+      line-height: 1.8;
+    }
+    .payment-note a { color: var(--gold-dark); font-weight: 500; text-decoration: none; }
+    .payment-note a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .payment-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="logo.png" alt="Women's Travel Club Kolkata" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="previous_tours.html">Previous</a></li>
+      <li><a href="upcoming_tours.html">Upcoming</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="payments.html" class="nav-cta">PAYMENTS</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Payments</h1>
+  <p class="subtitle">Choose your preferred payment method to secure your spot</p>
+  <span class="header-rule"></span>
+</div>
+
+<div class="section">
+  <div class="payment-grid">
+    <a href="upi.html" class="payment-card">
+      <span class="payment-icon">📱</span>
+      <h3>UPI Payment</h3>
+      <p>Pay instantly using Google Pay, PhonePe, or any UPI app. Scan a QR code or enter the UPI ID directly.</p>
+      <span class="payment-cta">Pay via UPI</span>
+    </a>
+    <a href="netbanking.html" class="payment-card">
+      <span class="payment-icon">🏦</span>
+      <h3>Net Banking</h3>
+      <p>Transfer directly to our bank account via NEFT / IMPS / RTGS. Supports SBI, HDFC, ICICI, Axis, PNB &amp; more.</p>
+      <span class="payment-cta">Pay via Bank</span>
+    </a>
+  </div>
+
+  <a href="https://wa.me/9163407717?text=Hi%2C%20I%20have%20completed%20my%20payment%20for%20a%20WTC%20trip." target="_blank" class="whatsapp-strip">
+    <span>💬</span>
+    <span>After paying, send your receipt to us on WhatsApp</span>
+  </a>
+
+  <div class="payment-note">
+    For queries, contact us at <a href="tel:9163407717">9163407717</a> or
+    <a href="mailto:wtckolkata03@gmail.com">wtckolkata03@gmail.com</a>.
+    Please read our <a href="refund.html">Refund Policy</a> before booking.
+  </div>
+
+  <div style="text-align:center;margin-top:2rem;">
+    <a href="index.html" class="btn btn-outline">← Back to Home</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="logo.png" alt="WTC Kolkata" />
+        <p>A community of women travellers from Kolkata, exploring offbeat destinations since 2019. Founded &amp; managed by Jhumur Nandy.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="previous_tours.html">Previous Tours</a></li>
+          <li><a href="upcoming_tours.html">Upcoming Tours</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+    
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9163407717">📞 9163407717</a></li>
+          <li><a href="mailto:wtckolkata03@gmail.com">✉️ wtckolkata03@gmail.com</a></li>
+          <li><a href="https://wa.me/919163407717" target="_blank">💬 WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Women's Travel Club Kolkata. All rights reserved.</span>
+      <div class="footer-social">
+        <a class="social-link" href="https://www.facebook.com/share/g/15WhLAve8J" target="_blank">f</a>
+        <a class="social-link" href="#">ig</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

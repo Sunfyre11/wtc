@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Previous Tours – Women's Travel Club Kolkata</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .year-block {
+      margin-bottom: 3.5rem;
+    }
+
+    .year-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--brown);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .year-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .trips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .trip-pill {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .trip-pill::before {
+      content: '✈';
+      font-size: 0.75rem;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .trip-pill:hover {
+      background: var(--warm-white);
+      color: var(--brown);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s, transform 0.6s;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html"><img src="logo.png" alt="Women's Travel Club Kolkata" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="previous_tours.html">Previous</a></li>
+        <li><a href="upcoming_tours.html">Upcoming</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="payments.html" class="nav-cta">PAYMENTS</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Previous Tours</h1>
+    <p class="subtitle">A journey through 7+ years of extraordinary adventures</p>
+    <span class="header-rule"></span>
+  </div>
+
+  <div class="section">
+
+    <div class="year-block fade-in">
+      <div class="year-label">2026</div>
+      <div class="trips-grid">
+        <div class="trip-pill">Nayachar Trip</div>
+        <div class="trip-pill">Tamil Nadu Triangle</div>
+        <div class="trip-pill">Chupir Char</div>
+        <div class="trip-pill">Nayachar Family Trip</div>
+        <div class="trip-pill">Manas National Park (Holi)</div>
+        <div class="trip-pill">Winter Spiti</div>
+        <div class="trip-pill">Shivniwas Trip</div>
+        <div class="trip-pill">Simultala Deoghar</div>
+        <div class="trip-pill">Debrigarh Sanctuary</div>
+      </div>
+    </div>
+
+    <div class="year-block fade-in">
+      <div class="year-label">2025</div>
+      <div class="trips-grid">
+        <div class="trip-pill">Bishnupur Joypur</div>
+        <div class="trip-pill">Hampi, Badami, Aihole, Pattadakkal</div>
+        <div class="trip-pill">Subah Ki Benaras</div>
+        <div class="trip-pill">Rann of Kutch &amp; Dholavira</div>
+        <div class="trip-pill">Haridwar, Auli, Khirsu, Lansdowne</div>
+        <div class="trip-pill">Manas National Park</div>
+        <div class="trip-pill">Pathuriaghata Rajbari</div>
+        <div class="trip-pill">Kashmir</div>
+        <div class="trip-pill">Tadoba National Park</div>
+        <div class="trip-pill">Bandavgarh</div>
+        <div class="trip-pill">Mizoram</div>
+        <div class="trip-pill">Rampuria, Darjeeling</div>
+        <div class="trip-pill">Mairungoan, Duka Valley</div>
+        <div class="trip-pill">Deras, Offbeat Orissa</div>
+        <div class="trip-pill">Koraput Jagdalpur</div>
+        <div class="trip-pill">Panchalingeshwar Devkund</div>
+        <div class="trip-pill">Ushri Falls, Bhatinda Falls</div>
+        <div class="trip-pill">Monsoon Ranchi</div>
+        <div class="trip-pill">Sri Lanka</div>
+        <div class="trip-pill">Amlasole Belpahari Kakrajhore</div>
+        <div class="trip-pill">Monsoon Manpat</div>
+        <div class="trip-pill">Mahendragiri Chandrgir</div>
+        <div class="trip-pill">Offbeat Himachal (Parvati &amp; Tirthan)</div>
+        <div class="trip-pill">Shivkhola Lepchajagat Kolbong</div>
+        <div class="trip-pill">Andaman</div>
+        <div class="trip-pill">Krishnanagar Jagadhatri Parikrama</div>
+        <div class="trip-pill">Chandni Jaltungi</div>
+        <div class="trip-pill">Majestic Purulia</div>
+        <div class="trip-pill">Lakshadweep Women's Trip</div>
+        <div class="trip-pill">Hornbill Festival, Nagaland</div>
+        <div class="trip-pill">Satkosia Sand Resort</div>
+      </div>
+    </div>
+
+    <div class="year-block fade-in">
+      <div class="year-label">2024</div>
+      <div class="trips-grid">
+        <div class="trip-pill">Panchachulli Base Camp</div>
+        <div class="trip-pill">Tadoba Tiger Reserve</div>
+        <div class="trip-pill">Benares</div>
+        <div class="trip-pill">Bidyang Kaffergaon</div>
+        <div class="trip-pill">Debrigarh Sambalpur</div>
+        <div class="trip-pill">Saranda</div>
+        <div class="trip-pill">Rann of Kutch</div>
+        <div class="trip-pill">Tusu in Purulia</div>
+        <div class="trip-pill">Mongoljodi Birding Trip</div>
+        <div class="trip-pill">Dooars</div>
+        <div class="trip-pill">Ajanta Ellora Aurangabad</div>
+        <div class="trip-pill">Daringbari</div>
+        <div class="trip-pill">Monsoon Ranchi</div>
+        <div class="trip-pill">Khandadhar Rourkela</div>
+        <div class="trip-pill">Western Ghats</div>
+        <div class="trip-pill">Kinnaur Lahul Spiti</div>
+        <div class="trip-pill">Lucknow &amp; Ayodhya Dham</div>
+        <div class="trip-pill">Lakshadweep</div>
+        <div class="trip-pill">Coastal Karnataka</div>
+        <div class="trip-pill">Satkosia Badamul</div>
+        <div class="trip-pill">Hornbill Festival, Nagaland</div>
+        <div class="trip-pill">Tikarpara, Offbeat Odisha</div>
+      </div>
+    </div>
+
+    <div class="year-block fade-in">
+      <div class="year-label">2023</div>
+      <div class="trips-grid">
+        <div class="trip-pill">Hatipathar Camping Trip</div>
+        <div class="trip-pill">Rajgir Nalanda Bodhogata</div>
+        <div class="trip-pill">Satkosia Badamul</div>
+        <div class="trip-pill">Gangoni</div>
+        <div class="trip-pill">Hampi Badami Aihole Pattadakal</div>
+        <div class="trip-pill">Ladakh</div>
+        <div class="trip-pill">Offbeat Odisha Keonjhar</div>
+        <div class="trip-pill">Mainpat</div>
+        <div class="trip-pill">Panchalingeshwar / Chandipur</div>
+        <div class="trip-pill">Jhargram Belpahari</div>
+        <div class="trip-pill">Offbeat Himachal, Tirthan, Sangar</div>
+        <div class="trip-pill">Itachuna Rajbari</div>
+        <div class="trip-pill">Tajpur</div>
+        <div class="trip-pill">Versay, Sikkim</div>
+        <div class="trip-pill">Khajuraho / Bandhavgarh</div>
+        <div class="trip-pill">Goa</div>
+      </div>
+    </div>
+
+    <div class="year-block fade-in">
+      <div class="year-label">2022</div>
+      <div class="trips-grid">
+        <div class="trip-pill">Dhublagadi Beach Camping</div>
+        <div class="trip-pill">Uttarakhand</div>
+        <div class="trip-pill">Muruguma Hills, Purulia</div>
+        <div class="trip-pill">Koraput Jagdalpur</div>
+        <div class="trip-pill">Sasaram</div>
+        <div class="trip-pill">Jim Corbett National Park</div>
+        <div class="trip-pill">Sishamara, Dooars</div>
+        <div class="trip-pill">Baguran Jalpai Beach</div>
+        <div class="trip-pill">Sandakphu Tumbling Darjeeling</div>
+      </div>
+    </div>
+
+    <div class="year-block fade-in">
+      <div class="year-label">2021</div>
+      <div class="trips-grid">
+        <div class="trip-pill">Kenduli</div>
+        <div class="trip-pill">Kakrajhor Belpahari</div>
+        <div class="trip-pill">Asannagar Senior Citizen Trip</div>
+        <div class="trip-pill">Dhuturdaha Resort</div>
+        <div class="trip-pill">Telkupi, Banda, Jaychandi, Baranti</div>
+        <div class="trip-pill">Ghatsila, Galudi, Duarsini, Amadubi</div>
+        <div class="trip-pill">Baramangwa, Kalimpong, Peshok</div>
+      </div>
+    </div>
+
+    <div class="year-block fade-in">
+      <div class="year-label">2020</div>
+      <div class="trips-grid">
+        <div class="trip-pill">Santiniketan Heritage Trip</div>
+        <div class="trip-pill">Joypur Forest &amp; Gokulnagar</div>
+        <div class="trip-pill">Mondarmoni &amp; Lalkankra Beach</div>
+        <div class="trip-pill">Raimatang Jayanti Buxa (Holi)</div>
+        <div class="trip-pill">Murshidabad, Cossimbazar</div>
+        <div class="trip-pill">Simultala</div>
+        <div class="trip-pill">Nayabasti, Takdah, Lamhatta</div>
+        <div class="trip-pill">Orange Village Sitong</div>
+      </div>
+    </div>
+
+    <div class="year-block fade-in">
+      <div class="year-label">2019</div>
+      <div class="trips-grid">
+        <div class="trip-pill">Satkosia Sand Resort</div>
+        <div class="trip-pill">Chupir Char, Natungram, Sribati</div>
+        <div class="trip-pill">Sundargram Resort</div>
+        <div class="trip-pill">Monsoon Keonjhar</div>
+        <div class="trip-pill">Boguran Jolpai Beach</div>
+        <div class="trip-pill">Gangani</div>
+        <div class="trip-pill">Offbeat Odisha Keonjhar</div>
+        <div class="trip-pill">Itachuna Rajbari</div>
+        <div class="trip-pill">Baguran Jalpai Beach</div>
+        <div class="trip-pill">Sandakphu</div>
+        <div class="trip-pill">Khandadhar &amp; Rourkela</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="logo.png" alt="WTC Kolkata" />
+          <p>A community of women travellers from Kolkata, exploring offbeat destinations since 2019.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="previous_tours.html">Previous Tours</a></li>
+            <li><a href="upcoming_tours.html">Upcoming Tours</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+    
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:9163407717">📞 9163407717</a></li>
+            <li><a href="mailto:wtckolkata03@gmail.com">✉️ wtckolkata03@gmail.com</a></li>
+            <li><a href="https://wa.me/919163407717" target="_blank">💬 WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Women's Travel Club Kolkata. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – Women's Travel Club Kolkata</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .gallery-masonry {
+      columns: 3;
+      column-gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item .overlay {
+      position: absolute; inset: 0;
+      background: rgba(92, 61, 30, 0);
+      transition: 0.3s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .gallery-item:hover .overlay { background: rgba(92, 61, 30, 0.25); }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(20, 12, 4, 0.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 1.5rem; right: 2rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      background: none;
+      border: none;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .lightbox-close:hover { opacity: 1; }
+    .lightbox-prev, .lightbox-next {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      font-size: 1.5rem;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.2s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .lightbox-prev { left: 1.5rem; }
+    .lightbox-next { right: 1.5rem; }
+    .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.2); }
+
+    @media (max-width: 900px) { .gallery-masonry { columns: 2; } }
+    @media (max-width: 600px) { .gallery-masonry { columns: 1; } }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="logo.png" alt="Women's Travel Club Kolkata" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="previous_tours.html">Previous</a></li>
+      <li><a href="upcoming_tours.html">Upcoming</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="payments.html" class="nav-cta">PAYMENTS</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Gallery</h1>
+  <p class="subtitle">Memories from our adventures across India and beyond</p>
+  <span class="header-rule"></span>
+</div>
+
+<div class="section">
+  <div class="gallery-masonry" id="gallery">
+    <div class="gallery-item" onclick="openLightbox(0)">
+      <img src="p1.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(1)">
+      <img src="l1.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(2)">
+      <img src="p2.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(3)">
+      <img src="l2.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(4)">
+      <img src="p3.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(5)">
+      <img src="l3.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(6)">
+      <img src="p4.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(7)">
+      <img src="p5.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(8)">
+      <img src="p6.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(9)">
+      <img src="p7.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(10)">
+      <img src="p8.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(11)">
+      <img src="p9.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+    <div class="gallery-item" onclick="openLightbox(12)">
+      <img src="p10.jpg" alt="Travel memory" loading="lazy" />
+      <div class="overlay"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-prev" onclick="moveLightbox(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="" />
+  <button class="lightbox-next" onclick="moveLightbox(1)">›</button>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="logo.png" alt="WTC Kolkata" />
+        <p>A community of women travellers from Kolkata, exploring offbeat destinations since 2019.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="previous_tours.html">Previous Tours</a></li>
+          <li><a href="upcoming_tours.html">Upcoming Tours</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+    
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9163407717">📞 9163407717</a></li>
+          <li><a href="mailto:wtckolkata03@gmail.com">✉️ wtckolkata03@gmail.com</a></li>
+          <li><a href="https://wa.me/919163407717" target="_blank">💬 WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Women's Travel Club Kolkata. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  const images = ['p1.jpg','l1.jpg','p2.jpg','l2.jpg','p3.jpg','l3.jpg','p4.jpg','p5.jpg','p6.jpg','p7.jpg','p8.jpg','p9.jpg','p10.jpg'];
+  let current = 0;
+  function openLightbox(idx) {
+    current = idx;
+    document.getElementById('lightbox-img').src = images[idx];
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  function moveLightbox(dir) {
+    current = (current + dir + images.length) % images.length;
+    document.getElementById('lightbox-img').src = images[current];
+  }
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') moveLightbox(1);
+    if (e.key === 'ArrowLeft') moveLightbox(-1);
+  });
+</script>
+</body>
+</html>

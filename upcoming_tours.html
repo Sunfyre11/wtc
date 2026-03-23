@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upcoming Tours – Women's Travel Club Kolkata</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .tours-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .tour-row {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 1.5rem;
+      box-shadow: 0 2px 16px var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .tour-row:hover {
+      transform: translateX(4px);
+      box-shadow: 0 8px 30px var(--shadow);
+    }
+
+    .tour-row-left {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .tour-row-date {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tour-row-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--brown);
+      line-height: 1.15;
+    }
+
+    .tour-row-right {
+      text-align: right;
+    }
+
+    .notice-box {
+      background: rgba(200, 150, 74, 0.08);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+      color: var(--text-mid);
+    }
+
+    .notice-box .icon {
+      font-size: 1.5rem;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s, transform 0.6s;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 600px) {
+      .tour-row {
+        grid-template-columns: 1fr;
+      }
+
+      .tour-row-right {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html"><img src="logo.png" alt="Women's Travel Club Kolkata" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="previous_tours.html">Previous</a></li>
+        <li><a href="upcoming_tours.html">Upcoming</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li><a href="payments.html" class="nav-cta">PAYMENTS</a></li>
+      </ul>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <h1>Upcoming Tours</h1>
+    <p class="subtitle">Adventures waiting to be taken — reserve your spot today</p>
+    <span class="header-rule"></span>
+  </div>
+
+  <div class="section fade-in">
+    <div class="tours-list">
+
+      <div class="tour-row">
+        <div class="tour-row-left">
+          <div class="tour-row-date">📅 10 April – 16 April 2026</div>
+          <div class="tour-row-name">Ranthambore &amp; Jhalana</div>
+          <span class="badge">Family &amp; Women</span>
+        </div>
+        <div class="tour-row-right">
+          <a href="https://wa.me/919163407717?text=I%20want%20to%20book%20a%20seat%20for%20the%20trip%20%27Ranthambore%20%26%20Jhalana%27"
+            target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+
+      <div class="tour-row">
+        <div class="tour-row-left">
+          <div class="tour-row-date">📅 24 May – 29 May 2026</div>
+          <div class="tour-row-name">Jim Corbett National Park</div>
+          <span class="badge">Family &amp; Women</span>
+        </div>
+        <div class="tour-row-right">
+          <a href="https://wa.me/919163407717?text=I%20want%20to%20book%20a%20seat%20for%20the%20trip%20%27Jim%20Corbett%20National%20Park%27"
+            target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+
+      <div class="tour-row">
+        <div class="tour-row-left">
+          <div class="tour-row-date">📅 1 June – 11 June 2026</div>
+          <div class="tour-row-name">Grand Ladakh</div>
+          <span class="badge green">Women Only</span>
+        </div>
+        <div class="tour-row-right">
+          <a href="https://wa.me/919163407717?text=I%20want%20to%20book%20a%20seat%20for%20the%20trip%20%27Grand%20Ladakh%27"
+            target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+
+      <div class="tour-row">
+        <div class="tour-row-left">
+          <div class="tour-row-date">📅 24 June – 2 July 2026</div>
+          <div class="tour-row-name">Zanskar Valley</div>
+          <span class="badge green">Women Only</span>
+        </div>
+        <div class="tour-row-right">
+          <a href="https://wa.me/919163407717?text=I%20want%20to%20book%20a%20seat%20for%20the%20trip%20%27Zanskar%20Valley%27"
+            target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+
+      <div class="tour-row">
+        <div class="tour-row-left">
+          <div class="tour-row-date">📅 15 December – 19 December 2026</div>
+          <div class="tour-row-name">Lakshadweep</div>
+          <span class="badge green">Women Only</span>
+        </div>
+        <div class="tour-row-right">
+          <a href="https://wa.me/919163407717?text=I%20want%20to%20book%20a%20seat%20for%20the%20trip%20%27Lakshadweep%27"
+            target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+
+      <div class="tour-row">
+        <div class="tour-row-left">
+          <div class="tour-row-date">📅 18 December – 22 December 2026</div>
+          <div class="tour-row-name">Lakshadweep</div>
+          <span class="badge green">Women Only</span>
+        </div>
+        <div class="tour-row-right">
+          <a href="https://wa.me/919163407717?text=I%20want%20to%20book%20a%20seat%20for%20the%20trip%20%27Lakshadweep%27"
+            target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="notice-box fade-in">
+      <div class="icon">🔔</div>
+      <div>New upcoming trips are announced regularly. Keep an eye out! Contact us at <a href="tel:9163407717"
+          style="color:var(--gold-dark);">9163407717</a> or join via <a
+          href="https://www.facebook.com/share/g/1AzvtFg9pc" target="_blank"
+          style="color:var(--gold-dark);">Facebook</a> to stay updated.</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-logo">
+          <img src="logo.png" alt="WTC Kolkata" />
+          <p>A community of women travellers from Kolkata, exploring offbeat destinations since 2019.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="previous_tours.html">Previous Tours</a></li>
+            <li><a href="upcoming_tours.html">Upcoming Tours</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:9163407717">📞 9163407717</a></li>
+            <li><a href="mailto:wtckolkata03@gmail.com">✉️ wtckolkata03@gmail.com</a></li>
+            <li><a href="https://wa.me/919163407717" target="_blank">💬 WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 Women's Travel Club Kolkata. All rights reserved.</span>
+        <div class="footer-social">
+          <a class="social-link" href="https://www.facebook.com/share/g/15WhLAve8J" target="_blank">f</a>
+          <a class="social-link" href="#">ig</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>

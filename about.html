@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Women's Travel Club Kolkata</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
+    .about-photo img { width: 100%; border-radius: 12px; object-fit: cover; height: 520px; }
+    .about-text p { color: var(--text-mid); margin-bottom: 1rem; font-size: 0.95rem; }
+    .about-text h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--brown); margin-bottom: 1.25rem; line-height: 1.15; }
+    .about-text blockquote {
+      border-left: 3px solid var(--gold);
+      padding: 0.5rem 0 0.5rem 1.25rem;
+      margin: 1.5rem 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--brown);
+      line-height: 1.45;
+    }
+    .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    .mission-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 2rem; box-shadow: 0 2px 16px var(--shadow); }
+    .mission-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .mission-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 400; color: var(--brown); margin-bottom: 0.75rem; }
+    .mission-card p { font-size: 0.88rem; color: var(--text-mid); line-height: 1.8; }
+    .reviews-stack { display: flex; flex-direction: column; gap: 1.5rem; }
+    .review-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 2rem; position: relative; box-shadow: 0 2px 16px var(--shadow); }
+    .review-quote { font-size: 0.88rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 1rem; font-style: italic; }
+    .review-name { font-weight: 600; font-size: 0.85rem; color: var(--brown); }
+    .stars { color: var(--gold); font-size: 0.8rem; margin-bottom: 0.6rem; }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .mission-grid { grid-template-columns: 1fr; }
+      .about-photo img { height: 320px; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="logo.png" alt="Women's Travel Club Kolkata" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="previous_tours.html">Previous</a></li>
+      <li><a href="upcoming_tours.html">Upcoming</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="payments.html" class="nav-cta">PAYMENTS</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>About Us</h1>
+  <p class="subtitle">Our story, mission &amp; the women behind WTC</p>
+  <span class="header-rule"></span>
+</div>
+
+<!-- STORY SECTION -->
+<div class="section fade-in">
+  <div class="about-grid">
+    <div class="about-photo">
+      <img src="dp.jpg" alt="Jhumur Nandy – Founder" />
+    </div>
+    <div class="about-text">
+      <p style="font-size:0.78rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.75rem;">Our Founding Story</p>
+      <h2>Born from a Shared Passion for Exploration</h2>
+      <p>It all started on <strong>20th January 2019</strong> — a group of Facebook friends with a common interest got together and went on a tour. Nobody thought this small trip would grow into something so significant.</p>
+      <p>One trip after another, and with a love for writing travelogues, more friends with a shared passion for travel and exploration joined the journey. That's how the Facebook group <strong>"Women's Travel Club Kolkata"</strong> was born in April 2019, managed by <strong>Jhumur Nandy</strong>.</p>
+      <blockquote>"We don't plan for common travel destinations — we discover new places and execute them professionally so members can have a hassle-free, memorable tour every time."</blockquote>
+      <p style="color:var(--text-light);font-style:italic;">— Jhumur Nandy, Founder &amp; Admin</p>
+      <div style="margin-top:1.75rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="https://wa.me/919163407717" target="_blank" class="btn btn-primary">Connect on WhatsApp</a>
+        <a href="upcoming_tours.html" class="btn btn-outline">See Upcoming Trips</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION & VISION -->
+<div style="background:var(--warm-white);padding:80px 0;">
+  <div class="section" style="padding-top:0;padding-bottom:0;">
+    <h2 class="section-title">Mission &amp; Vision</h2>
+    <span class="rule"></span>
+    <div class="mission-grid fade-in">
+      <div class="mission-card">
+        <div class="mission-icon">🌏</div>
+        <h3>Our Mission</h3>
+        <p>To enable solo women travellers to chase their dreams and passion for travel — and to build a community for all who love adventure and want to experience the vivid cultural diversity of our country and beyond.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon">🛡️</div>
+        <h3>Our Vision</h3>
+        <p>To create and maintain a group that puts utmost effort into ensuring safety and security for all women travellers, so they can enjoy and travel to new, beautiful, and unexplored places they have always dreamed of.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon">🗺️</div>
+        <h3>Offbeat First</h3>
+        <p>We specialize in destinations that most travel groups overlook. From hidden valleys of Himachal to remote Odisha sanctuaries — WTC takes you where others don't.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-icon">👭</div>
+        <h3>Inclusive Community</h3>
+        <p>From college students to senior citizens — our trips welcome women of all ages, backgrounds, and fitness levels. Every member's comfort and joy matters equally.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<div class="section fade-in">
+  <h2 class="section-title">What Our Travellers Say</h2>
+  <span class="rule"></span>
+  <div class="reviews-stack">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-quote">As a serious asthma patient, I never imagined completing Ladakh without any oxygen support. Full credit goes to Jhumur Nandy. Her detailed guidance and care made this trip possible in the most wonderful way. I am happy in this group and want to travel more in future. I recommend everyone to join!</p>
+      <div class="review-name">— Sharabani Pal</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-quote">Jhumur took us to Umling La Pass — higher than Everest Base Camp — where most operators don't go. Her advice from the time of booking, her care throughout, the hotels, the food — everything was wonderful. I want every woman to experience a trip with WTC at least once.</p>
+      <div class="review-name">— Dr. Koyela Ghosh, Ashoknagar</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-quote">Family circumstances had made me completely homebound. Women's Travel Club gave me the opportunity to enjoy nature once again. Jhumur's incredible patience, uncommon destination choices, and full refund policy even for last-minute cancellations — not a single paisa deducted — is something no other travel group offers.</p>
+      <div class="review-name">— Jharna Ganguly</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-quote">To those still in two minds about joining — just take one brave step outside your door. Women's Travel Club will hold your hand. It is like an open sky: clouds, sunshine, a little storm — but with so many wonderful people to share every moment with. 🥰</p>
+      <div class="review-name">— Sangita Chatterjee</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="logo.png" alt="WTC Kolkata" />
+        <p>A community of women travellers from Kolkata, exploring offbeat destinations since 2019. Founded &amp; managed by Jhumur Nandy.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="previous_tours.html">Previous Tours</a></li>
+          <li><a href="upcoming_tours.html">Upcoming Tours</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+    
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9163407717">📞 9163407717</a></li>
+          <li><a href="mailto:wtckolkata03@gmail.com">✉️ wtckolkata03@gmail.com</a></li>
+          <li><a href="https://wa.me/919163407717" target="_blank">💬 WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Women's Travel Club Kolkata. All rights reserved.</span>
+      <div class="footer-social">
+        <a class="social-link" href="https://www.facebook.com/share/g/15WhLAve8J" target="_blank" title="Facebook">f</a>
+        <a class="social-link" href="#" title="Instagram">ig</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Net Banking – Women's Travel Club Kolkata</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .bank-details-card {
+      max-width: 620px;
+      margin: 2.5rem auto 0;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px var(--shadow);
+    }
+    .bank-details-header {
+      background: linear-gradient(135deg, var(--brown), var(--brown-light));
+      padding: 1.75rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .bank-details-header .icon { font-size: 2.2rem; }
+    .bank-details-header h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: white;
+      margin: 0;
+    }
+    .bank-details-header p { font-size: 0.8rem; color: rgba(255,255,255,0.65); margin: 0; }
+    .bank-details-body { padding: 2rem; }
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      min-width: 140px;
+    }
+    .detail-value {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--brown);
+      font-family: monospace;
+      letter-spacing: 0.04em;
+      flex: 1;
+      text-align: right;
+    }
+    .copy-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.3rem 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--gold-dark);
+      cursor: pointer;
+      transition: 0.2s;
+      flex-shrink: 0;
+    }
+    .copy-btn:hover { background: var(--gold); color: white; border-color: var(--gold); }
+    .copy-btn.copied { background: #27ae60; color: white; border-color: #27ae60; }
+    .banks-section {
+      max-width: 620px;
+      margin: 2rem auto 0;
+    }
+    .banks-section h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .banks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+    .bank-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 0.75rem;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      text-align: center;
+      transition: 0.2s;
+      box-shadow: 0 2px 8px var(--shadow);
+    }
+    .bank-link:hover {
+      border-color: var(--gold);
+      color: var(--gold-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px var(--shadow);
+    }
+    .whatsapp-strip {
+      max-width: 620px;
+      margin: 2rem auto 0;
+      background: #25D366;
+      border-radius: 12px;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .whatsapp-strip:hover { background: #1ebe5c; transform: translateY(-2px); }
+    .whatsapp-strip span { font-size: 0.9rem; font-weight: 500; color: white; }
+    .back-row { text-align: center; margin-top: 2rem; }
+    @media (max-width: 500px) { .banks-grid { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="logo.png" alt="Women's Travel Club Kolkata" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="previous_tours.html">Previous</a></li>
+      <li><a href="upcoming_tours.html">Upcoming</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="payments.html" class="nav-cta">PAYMENTS</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Net Banking</h1>
+  <p class="subtitle">Transfer directly to our bank account via NEFT / IMPS / RTGS</p>
+  <span class="header-rule"></span>
+</div>
+
+<div class="section">
+
+  <div class="bank-details-card">
+    <div class="bank-details-header">
+      <span class="icon">🏦</span>
+      <div>
+        <h2>Bank Account Details</h2>
+        <p>State Bank of India</p>
+      </div>
+    </div>
+    <div class="bank-details-body">
+      <div class="detail-row">
+        <span class="detail-label">Account No.</span>
+        <span class="detail-value" id="acc-no">42626543728</span>
+        <button class="copy-btn" onclick="copyDetail('acc-no', this)">Copy</button>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">IFSC Code</span>
+        <span class="detail-value" id="ifsc">SBIN0005680</span>
+        <button class="copy-btn" onclick="copyDetail('ifsc', this)">Copy</button>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Bank Name</span>
+        <span class="detail-value" style="font-family:inherit;">State Bank of India</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Transfer Via</span>
+        <span class="detail-value" style="font-family:inherit;">NEFT / IMPS / RTGS</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="banks-section">
+    <h3>Login to Your Bank</h3>
+    <div class="banks-grid">
+      <a href="https://www.onlinesbi.sbi/" target="_blank" class="bank-link">🏛 SBI</a>
+      <a href="https://www.hdfcbank.com/personal/pay/money-transfer/national-electronics-funds-transfer" target="_blank" class="bank-link">🏦 HDFC</a>
+      <a href="https://www.icicibank.com/personal-banking/online-services/funds-transfer" target="_blank" class="bank-link">🏦 ICICI</a>
+      <a href="https://www.axisbank.com/bank-smart/internet-banking/fund-transfer" target="_blank" class="bank-link">🏦 Axis</a>
+      <a href="https://netbanking.netpnb.com/corp/AuthenticationController?FORMSGROUP_ID__=AuthenticationFG&__START_TRAN_FLAG__=Y&__FG_BUTTONS__=LOAD&ACTION.LOAD=Y&AuthenticationFG.LOGIN_FLAG=1&BANK_ID=024" target="_blank" class="bank-link">🏦 PNB</a>
+      <a href="https://www.bankofbaroda.in/" target="_blank" class="bank-link">🏦 BoB</a>
+    </div>
+  </div>
+
+  <a href="https://wa.me/9163407717?text=Hi%2C%20I%20have%20completed%20my%20bank%20transfer%20for%20a%20WTC%20trip.%20Please%20find%20my%20receipt%20attached." target="_blank" class="whatsapp-strip">
+    <span>💬</span>
+    <span>After transferring, send your payment receipt to us on WhatsApp</span>
+  </a>
+
+  <div class="back-row">
+    <a href="payments.html" class="btn btn-outline" style="margin-right:1rem;">← Payment Options</a>
+    <a href="index.html" class="btn btn-outline">Home</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="logo.png" alt="WTC Kolkata" />
+        <p>A community of women travellers from Kolkata, exploring offbeat destinations since 2019. Founded &amp; managed by Jhumur Nandy.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="previous_tours.html">Previous Tours</a></li>
+          <li><a href="upcoming_tours.html">Upcoming Tours</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+    
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9163407717">📞 9163407717</a></li>
+          <li><a href="mailto:wtckolkata03@gmail.com">✉️ wtckolkata03@gmail.com</a></li>
+          <li><a href="https://wa.me/919163407717" target="_blank">💬 WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Women's Travel Club Kolkata. All rights reserved.</span>
+      <div class="footer-social">
+        <a class="social-link" href="https://www.facebook.com/share/g/15WhLAve8J" target="_blank">f</a>
+        <a class="social-link" href="#">ig</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  function copyDetail(id, btn) {
+    const text = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,2 +1,2 @@
-# wtc
-WTC Website
+# html-wtc
+Website for Women's Travel Club

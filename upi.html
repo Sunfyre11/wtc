@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UPI Payment – Women's Travel Club Kolkata</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .upi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 820px;
+      margin: 2.5rem auto 0;
+    }
+    .upi-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px var(--shadow);
+      transition: 0.3s;
+    }
+    .upi-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px var(--shadow); }
+    .upi-card-header {
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .upi-card-header.gpay { background: linear-gradient(135deg, #f8f9ff, #eef1ff); }
+    .upi-card-header.phonepe { background: linear-gradient(135deg, #f5f0ff, #ede5ff); }
+    .upi-app-icon { font-size: 2rem; }
+    .upi-app-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--brown);
+    }
+    .upi-card-body { padding: 1.75rem; }
+    .upi-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 0.4rem;
+    }
+    .upi-id-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .upi-id-text {
+      flex: 1;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--brown);
+      font-family: monospace;
+      letter-spacing: 0.03em;
+    }
+    .copy-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--gold-dark);
+      cursor: pointer;
+      transition: 0.2s;
+      letter-spacing: 0.05em;
+    }
+    .copy-btn:hover { background: var(--gold); color: white; border-color: var(--gold); }
+    .copy-btn.copied { background: #27ae60; color: white; border-color: #27ae60; }
+    .qr-container {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .qr-container img {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 0.5rem;
+      background: white;
+    }
+    .upi-actions { display: flex; flex-direction: column; gap: 0.65rem; }
+    .upi-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+    .upi-btn-primary { background: var(--gold); color: white; }
+    .upi-btn-primary:hover { background: var(--gold-dark); }
+    .upi-btn-outline { background: white; color: var(--gold-dark); border: 1.5px solid var(--gold); }
+    .upi-btn-outline:hover { background: var(--gold); color: white; }
+    .whatsapp-strip {
+      max-width: 820px;
+      margin: 2rem auto 0;
+      background: #25D366;
+      border-radius: 12px;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .whatsapp-strip:hover { background: #1ebe5c; transform: translateY(-2px); }
+    .whatsapp-strip span { font-size: 0.9rem; font-weight: 500; color: white; }
+    .back-row { text-align: center; margin-top: 2rem; }
+    @media (max-width: 650px) { .upi-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html"><img src="logo.png" alt="Women's Travel Club Kolkata" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="previous_tours.html">Previous</a></li>
+      <li><a href="upcoming_tours.html">Upcoming</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+
+      <li><a href="payments.html" class="nav-cta">PAYMENTS</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>UPI Payment</h1>
+  <p class="subtitle">Scan the QR code or copy the UPI ID to pay instantly</p>
+  <span class="header-rule"></span>
+</div>
+
+<div class="section">
+  <div class="upi-grid">
+
+    <!-- Google Pay -->
+    <div class="upi-card">
+      <div class="upi-card-header gpay">
+        <span class="upi-app-icon">🟢</span>
+        <span class="upi-app-name">Google Pay</span>
+      </div>
+      <div class="upi-card-body">
+        <div class="upi-label">UPI ID</div>
+        <div class="upi-id-row">
+          <span class="upi-id-text" id="gpay-id">jhumurmanas-2@okicici</span>
+          <button class="copy-btn" onclick="copyUPI('gpay-id', this)">Copy</button>
+        </div>
+        <div class="qr-container">
+          <img src="gpqr.jpg" alt="Google Pay QR Code" />
+          <div style="font-size:0.78rem;color:var(--text-light);margin-top:0.5rem;">Scan with Google Pay</div>
+        </div>
+        <div class="upi-actions">
+          <a href="intent://scan/#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end;" class="upi-btn upi-btn-primary">
+            📲 Open Google Pay
+          </a>
+          <a href="gpqr.jpg" download class="upi-btn upi-btn-outline">
+            ⬇ Download QR Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PhonePe -->
+    <div class="upi-card">
+      <div class="upi-card-header phonepe">
+        <span class="upi-app-icon">🟣</span>
+        <span class="upi-app-name">PhonePe</span>
+      </div>
+      <div class="upi-card-body">
+        <div class="upi-label">UPI ID</div>
+        <div class="upi-id-row">
+          <span class="upi-id-text" id="phonepe-id">8910565462-2@ybl</span>
+          <button class="copy-btn" onclick="copyUPI('phonepe-id', this)">Copy</button>
+        </div>
+        <div class="qr-container">
+          <img src="ppqr.jpg" alt="PhonePe QR Code" />
+          <div style="font-size:0.78rem;color:var(--text-light);margin-top:0.5rem;">Scan with PhonePe</div>
+        </div>
+        <div class="upi-actions">
+          <a href="phonepe://upi" class="upi-btn upi-btn-primary">
+            📲 Open PhonePe
+          </a>
+          <a href="ppqr.jpg" download class="upi-btn upi-btn-outline">
+            ⬇ Download QR Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="https://wa.me/9163407717?text=Hi%2C%20I%20have%20completed%20my%20UPI%20payment%20for%20a%20WTC%20trip.%20Please%20find%20my%20receipt%20attached." target="_blank" class="whatsapp-strip">
+    <span>💬</span>
+    <span>After paying, send your payment receipt to us on WhatsApp</span>
+  </a>
+
+  <div class="back-row">
+    <a href="payments.html" class="btn btn-outline" style="margin-right:1rem;">← Payment Options</a>
+    <a href="index.html" class="btn btn-outline">Home</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-logo">
+        <img src="logo.png" alt="WTC Kolkata" />
+        <p>A community of women travellers from Kolkata, exploring offbeat destinations since 2019. Founded &amp; managed by Jhumur Nandy.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="previous_tours.html">Previous Tours</a></li>
+          <li><a href="upcoming_tours.html">Upcoming Tours</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+    
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9163407717">📞 9163407717</a></li>
+          <li><a href="mailto:wtckolkata03@gmail.com">✉️ wtckolkata03@gmail.com</a></li>
+          <li><a href="https://wa.me/919163407717" target="_blank">💬 WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 Women's Travel Club Kolkata. All rights reserved.</span>
+      <div class="footer-social">
+        <a class="social-link" href="https://www.facebook.com/share/g/15WhLAve8J" target="_blank">f</a>
+        <a class="social-link" href="#">ig</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  function copyUPI(id, btn) {
+    const text = document.getElementById(id).textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+</script>
+</body>
+</html>
